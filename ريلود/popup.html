@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>Update local add-ons</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      width: 250px;
+      padding: 10px;
+      padding-bottom: 2px;
+      user-select: none;
+    }
+    h2 {
+      text-align: center;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    button {
+      font-family: system-ui;
+      width: 40%;
+      font-size: 13px;
+      margin: 5px 0;
+      padding: 7px 6px;
+      font-weight: 500;
+      cursor: pointer;
+      border-radius: 25px;
+      border: none;
+      background-color: #0b83ff;
+      color: white;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #0777e7;
+    }
+    .extension {
+      margin-bottom: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    #extensionsList {
+      max-height: 240px;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      padding-top: 5px;
+      border-top: 1px solid #ccc;
+    }
+    #extensionsList button, .ccco {
+      padding: 7px 6px;
+      color: #0b83ff;
+      background-color: #94c4ff4f;
+    }
+    #extensionsList button:hover,.ccco:hover {
+      background-color: #94c4ff8e;
+    }
+  </style>
+</head>
+<body>
+  <h2>Update local add-ons</h2>
+  <button id="updateAll" style="width: 100%;">Update all</button>
+  <br>
+  <button class="ccco" id="updateAllReloadTabs" style="width: 100%;margin-bottom: 10px;">Update all + tabs</button>
+  <div id="extensionsList"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
